@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        jcenter()
+        maven { url 'https://jitpack.io' }
+
+        // 添加此库
+        maven { url "https://api.xposed.info/" }
+    }
+}
+rootProject.name = "闪退日志捕获"
+include ':app'
+include ':hooktest'
